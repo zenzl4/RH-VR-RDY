@@ -1,0 +1,3 @@
+2025-04-04 21:29:50 - INFO - resume_analyzer - logging_setup.py:71 - Log file created at logs\resume_analyzer_20250404_212950.log
+2025-04-04 21:29:50 - INFO - resume_analyzer - logging_setup.py:73 - Logging initialized at level INFO
+2025-04-04 21:29:53 - INFO - resume_analyzer - main.py:24 - Initializing application components

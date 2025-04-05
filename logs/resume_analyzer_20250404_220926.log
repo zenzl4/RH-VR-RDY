@@ -1,0 +1,3 @@
+2025-04-04 22:09:26 - INFO - resume_analyzer - logging_setup.py:71 - Log file created at logs\resume_analyzer_20250404_220926.log
+2025-04-04 22:09:26 - INFO - resume_analyzer - logging_setup.py:73 - Logging initialized at level INFO
+2025-04-04 22:09:28 - INFO - resume_analyzer - main.py:80 - Running both API and UI

@@ -1,0 +1,24 @@
+
+
+# Core dependencies
+gradio==3.50.2
+Flask==2.3.3
+PyPDF2==3.0.1
+requests==2.31.0
+
+# Text processing
+langdetect==1.0.9
+regex==2023.8.8
+
+# Utility
+json5==0.9.14
+python-dotenv==1.0.0
+
+# Async operations
+asyncio==3.4.3
+aiohttp==3.8.5
+
+# Optional: for advanced data processing
+numpy==1.24.3
+pandas==2.0.3
+

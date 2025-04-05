@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{CANDIDATE_NAME}} - Assessment Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            line-height: 1.6;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .timestamp {
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: right;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .match-score {
+            font-size: 24px;
+            font-weight: bold;
+            color: #27ae60;
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .skill-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px 0;
+            gap: 10px;
+        }
+        .skill-tag {
+            background: #e8f4f8;
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        .matching-skill {
+            background: #d5f5e3;
+        }
+        .missing-skill {
+            background: #fadbd8;
+        }
+        .criteria-pass {
+            color: #27ae60;
+        }
+        .criteria-fail {
+            color: #e74c3c;
+        }
+        .recommendation {
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .highly-recommend {
+            background-color: #d5f5e3;
+            border-left: 5px solid #27ae60;
+        }
+        .recommend {
+            background-color: #ebf5fb;
+            border-left: 5px solid #3498db;
+        }
+        .consider {
+            background-color: #fef9e7;
+            border-left: 5px solid #f1c40f;
+        }
+        .not-recommend {
+            background-color: #fdedec;
+            border-left: 5px solid #e74c3c;
+        }
+        .strengths-concerns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .strengths, .concerns {
+            flex: 1;
+            min-width: 300px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+        .strengths {
+            border-left: 3px solid #27ae60;
+        }
+        .concerns {
+            border-left: 3px solid #e74c3c;
+        }
+        .interview-questions {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        footer {
+            margin-top: 40px;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+            font-size: 12px;
+            color: #7f8c8d;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{CANDIDATE_NAME}}</h1>
+        <div class="timestamp">Assessment Report | {{TIMESTAMP}}</div>
+    </div>
+    
+    <div class="match-score">
+        <div>Skills Match Score</div>
+        <div style="font-size: 36px;">{{MATCH_SCORE}}%</div>
+    </div>
+    
+    <h2>Candidate Information</h2>
+    <table>
+        <tr><td><strong>Name</strong></td><td>{{CANDIDATE_NAME}}</td></tr>
+        <tr><td><strong>Email</strong></td><td>{{RESUME_EMAIL}}</td></tr>
+        <tr><td><strong>Phone</strong></td><td>{{RESUME_PHONE}}</td></tr>
+        <tr><td><strong>Experience</strong></td><td>{{YEARS_EXPERIENCE}} years</td></tr>
+        <tr><td><strong>Education</strong></td><td>{{EDUCATION}}</td></tr>
+        <tr><td><strong>Recent Position</strong></td><td>{{LAST_POSITION}}</td></tr>
+        <tr><td><strong>Requirements Match</strong></td><td>{{EXPERIENCE_RELEVANCE}}</td></tr>
+    </table>
+    
+    <h2>Skills Analysis</h2>
+    
+    <h3>Matching Skills</h3>
+    <div class="skill-container">
+        {{MATCHING_SKILLS}}
+    </div>
+    
+    <h3>Missing Skills</h3>
+    <div class="skill-container">
+        {{MISSING_SKILLS}}
+    </div>
+    
+    <h2>Requirements Check</h2>
+    <div>
+        {{CRITERIA_RESULTS}}
+    </div>
+    
+    <h2>Hiring Recommendation</h2>
+    <div class="recommendation {{RECOMMENDATION_CLASS}}">
+        <h3>{{RECOMMENDATION}} ({{OVERALL_RATING}}/10)</h3>
+    </div>
+    
+    <div class="strengths-concerns">
+        <div class="strengths">
+            <h3>Strengths</h3>
+            {{STRENGTHS}}
+        </div>
+        
+        <div class="concerns">
+            <h3>Concerns</h3>
+            {{CONCERNS}}
+        </div>
+    </div>
+    
+    <div class="interview-questions">
+        <h3>Suggested Interview Questions</h3>
+        {{INTERVIEW_QUESTIONS}}
+    </div>
+    
+    <footer>
+        <p>Generated by AI Recruitment Assistant powered by Mistral LLM</p>
+        <p>This report is for informational purposes only and should be used alongside other recruitment tools.</p>
+    </footer>
+</body>
+</html>
